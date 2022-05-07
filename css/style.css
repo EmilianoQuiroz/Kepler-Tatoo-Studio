@@ -1,14 +1,6 @@
-/* =================================
-------------------------------------
-  Cassi | Photo Studio HTML Template
-  Version: 1.0
- ------------------------------------
- ====================================*/
-
-/*----------------------------------------*/
-
-/* Template default CSS
-/*----------------------------------------*/
+/*
+Kepler Tattoo Studio
+*/
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap");
@@ -328,7 +320,7 @@ ul, ol {
 	transition: all 0.5s ease 0.8s;
 }
 /*---------------------
-   Header section
+   Header
  -----------------------*/
 
 .header-section {
@@ -349,7 +341,7 @@ ul, ol {
 	line-height: 37px;
 }
 /*---------------------
-   Hero section
+   Carrousel
  -----------------------*/
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -522,7 +514,7 @@ ul, ol {
 	transition: all 0.5s ease 1s;
 }
 /*---------------------
-   Footer section
+   Footer 
  -----------------------*/
 
 .footer-section {
@@ -590,7 +582,7 @@ ul, ol {
 	}
 }
 /*------------------
-   About page
+   Nosotros
  ------------------*/
 
 .page-top-section {
@@ -729,7 +721,7 @@ ul, ol {
 	background: #fff;
 }
 /*------------------
-   Gallery page
+   Galeria
  ------------------*/
 
 .gallery-section {
@@ -819,7 +811,7 @@ ul, ol {
 	border: 2px solid #242deb;
 }
 /*----------------
-   Blog Page
+   Blog
  ----------------*/
 
 .blog-section {
@@ -987,7 +979,7 @@ ul, ol {
 	}
 }
 /*-------------------
-   Blog Single Page
+   Blog 
  --------------------*/
 
 .blog-single-section {
@@ -1167,7 +1159,7 @@ ul, ol {
 	border: 1px solid #000000;
 }
 /*----------------
-   Contact Page
+   Contacto
  ----------------*/
 
 .contact-section {

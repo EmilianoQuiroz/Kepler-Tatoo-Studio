@@ -1,11 +1,3 @@
-/* ===================================
---------------------------------------
-	Cassi | Photo Studio HTML Template
-	Version: 1.0
---------------------------------------
-======================================*/
-
-
 'use strict';
 
 $(window).on('load', function() {
@@ -47,7 +39,7 @@ $(window).on('load', function() {
 
 
 	/*------------------
-		Hero Item Size
+		Carrusel
 	--------------------*/
 	function heroItemSize () {
 		if($(window).width() > 767) {
@@ -69,7 +61,7 @@ $(window).on('load', function() {
 	}
 
 	/*------------------
-		Hero Slider
+		Carrusel 
 	--------------------*/
 	$('.hero-slider').owlCarousel({
 		loop: true,

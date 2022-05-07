@@ -54,17 +54,14 @@
   filter: alpha(opacity=100);
 }
 
-/* mobile touch has position:absolute to allow zooming */
+/* mobile touch */
 .fr-window.fr-mobile-touch,
 .fr-overlay.fr-mobile-touch {
   position: absolute;
   overflow: visible;
 }
 
-/* some properties on the window are used to toggle things
- * like margin and the fullclick mode,
- * we reset those properties after measuring them
- */
+
 .fr-measured {
   margin: 0 !important;
   min-width: 0 !important;
@@ -112,12 +109,6 @@
   cursor: pointer;
 }
 
-/*
-   padding:
-   youtube & vimeo always have buttons on the outside
-   side button = 72 = 54 + (2 * 9 margin)
-   close button = 48
-*/
 /* padding ui:inside */
 .fr-ui-inside .fr-container {
   padding: 20px 20px;
@@ -189,7 +180,7 @@
   padding: 48px 0px;
 }
 
-/* overflow-y should always have 0 padding top and bottom */
+/* overflow-y */
 .fr-overflow-y .fr-container {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -200,8 +191,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  /* IE11 has a 1px blur bug on the edges of the caption (ui:inside)
-     during animation with overflow:hidden */
   overflow: visible;
 }
 
@@ -249,7 +238,6 @@
   opacity: 0.8;
   zoom: 1;
 }
-/* ui:outside has a slightly lighter info background to break up from black page backgrounds */
 .fr-ui-outside .fr-info-background {
   background: #0d0d0d;
 }
@@ -283,8 +271,6 @@
   white-space: nowrap;
 }
 
-/* positions not within the info bar
-   for ui:outside/inside */
 .fr-position-outside,
 .fr-position-inside {
   position: absolute;
@@ -334,7 +320,6 @@
   opacity: 1;
 }
 
-/* display it for the outside ui, hide the caption inside */
 .fr-ui-outside .fr-position-outside {
   display: block;
 }
@@ -398,17 +383,14 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* the stroke is brighter inside the info box */
 .fr-info .fr-stroke-color {
   background: rgba(80, 80, 80, 0.3);
 }
 
-/* remove the stroke when outside ui has a caption */
 .fr-ui-outside.fr-has-caption .fr-content .fr-stroke-bottom {
   display: none;
 }
 
-/* remove stroke and shadow when ui:fullclick */
 .fr-ui-fullclick .fr-stroke {
   display: none;
 }
@@ -416,7 +398,6 @@
   box-shadow: none;
 }
 
-/* the info box never bas a top stroke */
 .fr-info .fr-stroke-top {
   display: none;
 }
@@ -685,7 +666,6 @@
   position: relative;
   float: left;
 }
-/* this element is there as an alternative to putting the loading image on the background */
 .fr-thumbnail-loading-icon {
   display: none;
 }
@@ -768,8 +748,6 @@
 
 .fr-thumbnails-side-button-icon {
   position: absolute;
-  /*top: -7px;
-  left: -7px;*/
   top: 0;
   left: 0;
   width: 100%;
@@ -788,12 +766,11 @@
   background: #090909;
 }
 
-/* put a stroke on the connecting caption*/
 .fr-window-ui-fullclick.fr-thumbnails-enabled.fr-thumbnails-horizontal
   .fr-info
   .fr-stroke-bottom {
   display: block !important;
-} /*({ box-shadow: inset 0 -1px 0 rgba(255,255,255,.1); } */
+}
 .fr-window-ui-fullclick.fr-thumbnails-enabled.fr-thumbnails-vertical
   .fr-info
   .fr-stroke-left {
@@ -869,10 +846,6 @@
     margin-bottom: 20px;
   }
 }
-
-/* hide thumbnails on smaller screens
-   the js always hides them on touch based devices
-*/
 @media all and (max-width: 500px) and (orientation: portrait),
   all and (orientation: landscape) and (max-height: 500px) {
   .fr-thumbnails-horizontal .fr-thumbnails {
@@ -898,9 +871,6 @@
   } /* overflow: false */
 }
 
-/* switch between ui modes
-   we force everything not in the current UI mode to hide
-*/
 .fr-window-ui-fullclick .fr-side-next-outside,
 .fr-window-ui-fullclick .fr-side-previous-outside,
 .fr-window-ui-fullclick .fr-close-outside,
@@ -924,10 +894,6 @@
 .fr-window-ui-inside .fr-close-outside {
   display: none !important;
 }
-
-/* some ui elements can be toggled on mousemove.
-   filter:alpha(opacity) is bugged so we use display in oldIE
-*/
 .fr-toggle-ui {
   opacity: 0;
   -webkit-transition: opacity 0.3s;
@@ -1285,7 +1251,7 @@
 
 .fr-window-skin-fresco.fr-svg.fr-mobile-touch .fr-side .fr-side-button-icon {
   opacity: 0.8;
-} /* touch always active but at lower opacity */
+} 
 
 /* disabled (svg) */
 .fr-window-skin-fresco.fr-svg .fr-side-disabled .fr-side-button-icon,
@@ -1304,7 +1270,6 @@
   opacity: 0.2;
 }
 
-/* hide for ui:inside/fullclick, only for the image type */
 .fr-window-skin-fresco.fr-window-ui-inside
   .fr-type-image
   .fr-side-disabled
@@ -1428,9 +1393,7 @@
 .fr-window-skin-fresco .fr-close:hover .fr-close-icon {
   opacity: 1;
 }
-/* iOS 8.4.1 bug: when opacity changes it'll require 2 taps
-   force a single opacity to fix this
-*/
+
 .fr-window-skin-fresco.fr-svg.fr-mobile-touch .fr-close .fr-close-icon,
 .fr-window-skin-fresco.fr-mobile-touch .fr-close:hover .fr-close-icon {
   opacity: 1;
@@ -1455,7 +1418,6 @@
   border-width: 1px;
   border-color: rgba(255, 255, 255, 0.08); /* should remain rgba */
 }
-/* no inner border on active thumbnail */
 .fr-window-skin-fresco .fr-thumbnail-active .fr-thumbnail-overlay-border,
 .fr-window-skin-fresco .fr-thumbnail-active:hover .fr-thumbnail-overlay-border {
   border: 0;
